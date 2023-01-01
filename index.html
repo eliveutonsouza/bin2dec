@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bin2Dec</title>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div
+      id="notification"
+      class="h-14 bg-gradient-to-r from-green-500 to-teal-400 flex items-center justify-center text-lg text-neutral-900 font-semibold"
+    >
+      Conversor de Binario Para Decimal
+    </div>
+    <main
+      class="h-[calc(100vh-3.5rem)] w-screen flex items-center justify-center bg-neutral-900"
+    >
+      <section class="flex flex-col gap-4">
+        <h1 class="text-center text-2xl text-neutral-50">
+          Digite aqui sua operação!
+        </h1>
+
+        <div>
+          <form>
+            <input name="binary" id="binary" type="text" />
+            <i class="ph-equals-bold text-neutral-50"></i>
+            <input name="decimal" id="decimal" type="text" />
+
+            <div
+              class="flex flex-col justify-center gap-2 mt-7 disabled:cursor-not-allowed"
+            >
+              <button
+                id="btnConvert"
+                type="submit"
+                class="bg-slate-200 px-7 py-1"
+              >
+                Converter para Binario
+              </button>
+
+              <button
+                id="btnClean"
+                type="submit"
+                class="bg-slate-200 px-7 py-1 none"
+              >
+                Limpar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
